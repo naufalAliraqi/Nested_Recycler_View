@@ -1,6 +1,5 @@
 package com.example.nestedrecyclerview.ui.fragment
 
-import android.os.Bundle
 import com.example.nestedrecyclerview.data.HomeItem
 import com.example.nestedrecyclerview.data.HomeItemType
 import com.example.nestedrecyclerview.data.dataManger.DataManger
@@ -12,8 +11,7 @@ import com.example.nestedrecyclerview.ui.base.BaseFragment
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
-    private val bundle = Bundle()
-    lateinit var adapter: HomeAdapter
+    private lateinit var adapter: HomeAdapter
 
     override fun bindingInflater(): FragmentHomeBinding =
         FragmentHomeBinding.inflate(layoutInflater)
@@ -25,10 +23,5 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         itemsList.addAll(DataManger.getPosts().map { it.toHomeItem() })
         adapter = HomeAdapter(itemsList)
         binding.recyclerViewHome.adapter = adapter
-    }
-
-
-    override fun onStart() {
-        super.onStart()
     }
 }

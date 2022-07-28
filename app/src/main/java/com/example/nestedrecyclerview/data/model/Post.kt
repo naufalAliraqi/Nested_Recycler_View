@@ -5,5 +5,9 @@ data class Post(
     val userImage: String,
     val postDate: String,
     val postTitle: String,
-    val postImage: String
+    val postImage: String,
+    val postLikesCount: Long,
+    val postCommentCount: Long,
+    val postShareCount: Long,
+    val postIsLiked: Boolean
 )

@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.nestedrecyclerview.R
 import com.example.nestedrecyclerview.databinding.ItemAddStoryBinding
 import com.example.nestedrecyclerview.databinding.ItemStoryBinding
-import com.example.nutritionapp.data.model.Story
+import com.example.nestedrecyclerview.data.model.Story
 import java.lang.Exception
 
 class StoriesAdapter(private val stories: List<Story>) :

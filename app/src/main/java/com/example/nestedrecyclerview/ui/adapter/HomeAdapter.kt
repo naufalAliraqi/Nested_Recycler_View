@@ -3,13 +3,15 @@ package com.example.nestedrecyclerview.ui.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.nestedrecyclerview.R
 import com.example.nestedrecyclerview.data.HomeItem
 import com.example.nestedrecyclerview.data.model.Post
 import com.example.nestedrecyclerview.databinding.*
-import com.example.nutritionapp.data.model.Story
+import com.example.nestedrecyclerview.extention.convertNumberToMillionAndKiloString
+import com.example.nestedrecyclerview.data.model.Story
 import java.lang.Exception
 
 class HomeAdapter(private val itemsList: List<HomeItem<Any>>) :
@@ -67,6 +69,15 @@ class HomeAdapter(private val itemsList: List<HomeItem<Any>>) :
             textUserName.text = post.userName
             textPostDate.text = post.postDate
             textPostTitle.text = post.postTitle
+            textLikeCount.text = post.convertNumberToMillionAndKiloString(post.postLikesCount)
+            textCommentCount.text = post.convertNumberToMillionAndKiloString(post.postCommentCount)
+            textShareCount.text = post.convertNumberToMillionAndKiloString(post.postShareCount)
+            if (post.postIsLiked){
+                imageLike.setImageDrawable(AppCompatResources.getDrawable(this.root.context, R.drawable.ic_full_hart))
+            }
+            else{
+                imageLike.setImageDrawable(AppCompatResources.getDrawable(this.root.context, R.drawable.ic_empty_hart))
+            }
             Glide.with(this.root.context).load(post.userImage).into(imageUser)
             Glide.with(this.root.context).load(post.postImage).into(imagePost)
         }

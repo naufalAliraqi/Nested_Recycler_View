@@ -1,6 +1,4 @@
-package com.example.nutritionapp.data.model
-
-import java.io.Serializable
+package com.example.nestedrecyclerview.data.model
 
 data class Story(
     val shown: Boolean,

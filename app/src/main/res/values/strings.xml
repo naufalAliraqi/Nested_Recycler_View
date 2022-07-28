@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nested Recycler View</string>
+    <string name="app_name">Social App</string>
     <string name="add_new_story">Add new story</string>
     <string name="story_not_shown">Story not shown</string>
     <string name="type_is_wrong">Type is wrong</string>
