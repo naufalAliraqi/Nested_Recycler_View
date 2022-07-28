@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_user"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/me"
+            app:layout_constraintBottom_toBottomOf="@+id/image_story_not_shown"
+            app:layout_constraintEnd_toEndOf="@+id/image_story_not_shown"
+            app:layout_constraintStart_toStartOf="@+id/image_story_not_shown"
+            app:layout_constraintTop_toTopOf="@+id/image_story_not_shown"
+            app:shapeAppearanceOverlay="@style/circle" />
+
+        <ImageView
+            android:id="@+id/image_story_not_shown"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/story_ring"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
